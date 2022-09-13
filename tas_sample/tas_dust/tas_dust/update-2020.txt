@@ -1,0 +1,20 @@
+Updated to work with seiralport 8.0.7
+2020/3/31, J. Yun
+
+Reference: https://github.com/serialport/node-serialport/issues/1977
+
+
+
+        // Modified 2020/3/31 by J. Yun, to work with SerialPort 8.0.7
+
+        serialport.list().then(ports => {
+                ports.forEach(function(port) {
+                console.log(port.path);
+                });
+            });
+
+        // serialport.list(function (err, ports) {
+        //     ports.forEach(function(port) {
+        //     console.log(port.comName);
+        //     });
+        // });
